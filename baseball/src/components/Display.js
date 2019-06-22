@@ -84,12 +84,21 @@ hitHandler = () => {
   render() {
     return (
       <div >
+
         <h2>Balls: {this.state.balls}</h2>
         <h2>Strikes: {this.state.strikes}</h2>
         <h2>Outs: {this.state.outs}</h2>
         <h2>Hits: {this.state.hits}</h2>
         <h2>Inning: {this.state.inning}</h2>
-        <Dashboard />
+
+        <Dashboard 
+        ballsHandler={this.ballsHandler}
+        strikesHandler={this.strikesHandler}
+        outsHandler={this.outsHandler}
+        hitHandler={this.hitHandler}
+        inningHandler={this.inningHandler}
+        />
+        
       </div>
     );
   }
